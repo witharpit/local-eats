@@ -1,0 +1,259 @@
+
+*{
+    margin: 0;
+    padding:0;
+    
+}
+.con{
+    max-width: 1200px;
+    margin: auto;
+}
+.con1{
+    display: flex;
+    justify-items: center;
+    text-align: center;
+}
+html{
+    height: 100%;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: white;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%; 
+    background: #1C1C1E;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ccc;
+
+
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    color: orange;
+    transition: 0.35s;
+  }
+  
+
+  .hero, .heros,  .first {
+    
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assests/food5.jpg');
+  }
+  
+  .heros {
+    background-image: url(assests/food2.jpg);
+    height: 300px;
+  }
+  
+  
+  
+  .first {
+    background-color: #d7d9db;
+    color: orangered;
+  }
+  
+
+  .quote {
+    height: 250px;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align: center;
+    font-size: xx-large;
+    background-color: #FFFACD;
+    color: white;
+  }
+  
+
+  .featured-restaurants{
+    padding: 100px;
+  }
+  .grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  
+  .card {
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+
+  .form-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  form input,
+  form textarea,
+  form select {
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #ffb840;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #e09e2f;
+  }
+  
+
+  footer {
+    margin-top: auto;
+    background-color: #1C1C1E;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    
+  }
+  
+  footer .social a {
+    color: white;
+    margin: 10px;
+    font-size: 1rem;
+    
+  }
+  
+  footer img {
+    margin-top: 10px;
+  }
+  
+.nav-links li {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1C1C1E;
+  border-radius: 6px;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 0.8rem 1rem;
+  display: block;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-links a i.fa-caret-down {
+  margin-left: 6px;
+}
+
+    
+

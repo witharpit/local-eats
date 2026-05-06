@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Local Eats | Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/responsive.css">
+  <style>
+    ul.menu-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+    }
+    ul.menu-list li {
+      background: #ffffff;
+      padding: 1rem;
+      margin-bottom: 10px;
+      border-left: 4px solid #e09e2f;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: space-between;
+    }
+    .dish-name {
+      font-weight: 500;
+      color: #1e3d58;
+    }
+    .price {
+      font-weight: bold;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+<header>
+    <nav style="color: aliceblue;">
+      <a href="../index.html">
+        <div class="logo" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+          <i class="fa-solid fa-utensils fa-flip-horizontal fa-xl" style="color:#ffb840;"></i> Local Eats
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="/Main/About.html">About Us</a></li>
+        <li><a href="/Main/menu.html">Menu</a></li>
+        <li class="dropdown">
+          <a href="#">Services <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="/Services/bookings.html">Bookings</a></li>
+            <li><a href="/Services/contact.html">Contact</a></li>
+            <li><a href="/Services/events.html">Events</a></li>
+            <li><a href="/Services/offers.html">Offers</a></li>
+            <li><a href="/Services/feedback.html">Feedback</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Resources <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="/Resources/gallery.html">Gallery</a></li>
+            <li><a href="/Resources/vendors.html">Vendors</a></li>
+            <li><a href="/Resources/Location.html">Location</a></li>
+            <li><a href="/Resources/reviews.html">Reviews</a></li>
+            <li><a href="/Resources/FAQ.html">FAQ</a></li>
+            <li><a href="/Resources/references.html">References</a></li>
+            <li><a href="/Resources/blog.html">Blog</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Our Menu</h1>
+
+    <section class="menu-section">
+      <h2>Indian</h2>
+      <ul class="menu-list">
+        <li><span class="dish-name">Butter Chicken</span><span class="price">$14.99</span></li>
+        <li><span class="dish-name">Palak Paneer</span><span class="price">$12.49</span></li>
+        <li><span class="dish-name">Chicken Tikka</span><span class="price">$13.75</span></li>
+        <li><span class="dish-name">Vada Pav</span><span class="price">$5.99</span></li>
+        <li><span class="dish-name">Pani Puri</span><span class="price">$4.50</span></li>
+        <li><span class="dish-name">Samosa Chaat</span><span class="price">$6.75</span></li>
+      </ul>
+    </section>
+
+    <section class="menu-section">
+      <h2>Asian / Malaysian</h2>
+      <ul class="menu-list">
+        <li><span class="dish-name">Roti Canai</span><span class="price">$8.50</span></li>
+        <li><span class="dish-name">Nasi Lemak</span><span class="price">$9.95</span></li>
+        <li><span class="dish-name">Char Kway Teow</span><span class="price">$11.99</span></li>
+        <li><span class="dish-name">Momo Dumplings</span><span class="price">$10.49</span></li>
+        <li><span class="dish-name">Satay Chicken</span><span class="price">$9.99</span></li>
+        <li><span class="dish-name">Laksa Soup</span><span class="price">$12.00</span></li>
+      </ul>
+    </section>
+
+    <section class="menu-section">
+      <h2>Italian</h2>
+      <ul class="menu-list">
+        <li><span class="dish-name">Margherita Pizza</span><span class="price">$15.00</span></li>
+        <li><span class="dish-name">Chicken Alfredo Pasta</span><span class="price">$13.50</span></li>
+        <li><span class="dish-name">Pesto Gnocchi</span><span class="price">$12.75</span></li>
+        <li><span class="dish-name">Bruschetta</span><span class="price">$7.25</span></li>
+        <li><span class="dish-name">Lasagna</span><span class="price">$14.25</span></li>
+        <li><span class="dish-name">Mushroom Risotto</span><span class="price">$13.90</span></li>
+      </ul>
+    </section>
+
+    <section class="menu-section">
+      <h2>Middle Eastern</h2>
+      <ul class="menu-list">
+        <li><span class="dish-name">Chicken Shawarma</span><span class="price">$10.99</span></li>
+        <li><span class="dish-name">Falafel Wrap</span><span class="price">$9.49</span></li>
+        <li><span class="dish-name">Hummus & Pita</span><span class="price">$6.99</span></li>
+        <li><span class="dish-name">Lamb Kebab</span><span class="price">$11.75</span></li>
+        <li><span class="dish-name">Manakish (Zaatar)</span><span class="price">$7.00</span></li>
+        <li><span class="dish-name">Kofta Meatballs</span><span class="price">$10.25</span></li>
+      </ul>
+    </section>
+
+    <section class="menu-section">
+      <h2>Desserts</h2>
+      <ul class="menu-list">
+        <li><span class="dish-name">Gulab Jamun</span><span class="price">$4.99</span></li>
+        <li><span class="dish-name">Tiramisu</span><span class="price">$6.99</span></li>
+        <li><span class="dish-name">Churros</span><span class="price">$5.50</span></li>
+        <li><span class="dish-name">Mango Kulfi</span><span class="price">$4.75</span></li>
+        <li><span class="dish-name">Baklava</span><span class="price">$5.25</span></li>
+      </ul>
+    </section>
+
+    <section class="menu-section">
+      <h2>Drinks</h2>
+      <ul class="menu-list">
+        <li><span class="dish-name">Mango Lassi</span><span class="price">$3.99</span></li>
+        <li><span class="dish-name">Sugarcane Juice</span><span class="price">$4.50</span></li>
+        <li><span class="dish-name">Bubble Tea</span><span class="price">$5.25</span></li>
+        <li><span class="dish-name">Cold Brew Coffee</span><span class="price">$4.75</span></li>
+        <li><span class="dish-name">Masala Chai</span><span class="price">$3.25</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+        <div style="display: flex;justify-content: space-around;align-items: center;">
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Local Eats</p>
+            <a href="https://validator.w3.org/check?uri=referer">
+                <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML" />
+            </a>
+        </div>
+    </footer>
+    <script src="../scripts.js"></script>
+</body>
+</html>

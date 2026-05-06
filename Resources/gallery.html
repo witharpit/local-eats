@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Local Eats</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+<header>
+    <nav style="color: aliceblue;">
+      <a href="../index.html">
+        <div class="logo" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+          <i class="fa-solid fa-utensils fa-flip-horizontal fa-xl" style="color:#ffb840;"></i> Local Eats
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="/Main/About.html">About Us</a></li>
+        <li><a href="/Main/menu.html">Menu</a></li>
+        <li class="dropdown">
+          <a href="#">Services <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="/Services/bookings.html">Bookings</a></li>
+            <li><a href="/Services/contact.html">Contact</a></li>
+            <li><a href="/Services/events.html">Events</a></li>
+            <li><a href="/Services/offers.html">Offers</a></li>
+            <li><a href="/Services/feedback.html">Feedback</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Resources <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="/Resources/gallery.html">Gallery</a></li>
+            <li><a href="/Resources/vendors.html">Vendors</a></li>
+            <li><a href="/Resources/Location.html">Location</a></li>
+            <li><a href="/Resources/reviews.html">Reviews</a></li>
+            <li><a href="/Resources/FAQ.html">FAQ</a></li>
+            <li><a href="/Resources/references.html">References</a></li>
+            <li><a href="/Resources/blog.html">Blog</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="page-content">
+      <h1 style="text-align:center;">Photo Gallery</h1>
+      <div class="gallery">
+        <img src="../assests/pexels-ash-craig-122861-376464.jpg" alt="Vendor Cooking 1">
+        <img src="../assests/pexels-dana-tentis-118658-262959.jpg" alt="Street Food Dish 1">
+        <img src="../assests/pexels-ella-olsson-572949-1640777.jpg" alt="Street Food Vendor">
+        <img src="../assests/pizza.jpg" alt="Food Platter">
+        <img src="../assests/pexels-enginakyurt-1437267.jpg" alt="Outdoor Food Stall">
+        <img src="../assests/pexels-janetrangdoan-1128678.jpg" alt="Vendor with Customers">
+        <img src="../assests/pexels-marvin-ozz-1297854-2474658.jpg" alt="Grilled Street Food">
+        <img src="../assests/pexels-robinstickel-70497.jpg" alt="Asian Cuisine">
+        <img src="../assests/spagetti.jpg" alt="Food Truck Chef">
+        <img src="../assests/pexels-vanmalidate-769289.jpg" alt="People at Food Market">
+        <img src="../assests/food4.jpg" alt="Burger Vendor">
+        <img src="../assests/food5.jpg" alt="Drinks Stall">
+        <img src="../assests/food6.jpg" alt="Tacos Food Truck">
+        <img src="../assests/thai.jpg" alt="Vendor Preparing Dishes">
+        <img src="../assests/food7.jpg" alt="Sushi Street Vendor">
+        <img src="../assests/food8.jpg" alt="Night Food Market">
+        <img src="../assests/food9.jpg" alt="Dessert Vendor">
+        <img src="../assests/thai1.jpg" alt="Indian Street Food">
+        <img src="../assests/cake.jpg" alt="Vendor Serving Food">
+        <img src="../assests/pancake.jpg" alt="Food and Drink Vendor">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div style="display: flex; justify-content: space-around; align-items: center;">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p>&copy; 2025 Local Eats</p>
+      <a href="https://validator.w3.org/check?uri=referer">
+        <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML" />
+      </a>
+    </div>
+  </footer>
+  <script src="../scripts.js"></script>
+</body>
+</html>
