@@ -108,12 +108,22 @@ html, body {
     background-color: #2a2a2d !important;
     min-width: unset !important;
     width: 100% !important;
-    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    padding-top: 0 !important;
+    display: block !important;
     border-radius: 0 !important;
+    transition: none !important;
   }
 
   .dropdown-content.open {
-    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+    pointer-events: auto !important;
   }
 
   .dropdown-content a {
@@ -124,11 +134,15 @@ html, body {
 
   /* Disable CSS hover dropdown on mobile */
   .dropdown:hover .dropdown-content {
-    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
   }
 
   .dropdown-content.open {
-    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
   }
 
   /* --- Hero sections --- */
