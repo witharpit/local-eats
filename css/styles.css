@@ -1,8 +1,8 @@
 
-*{
+*, *::before, *::after {
     margin: 0;
-    padding:0;
-    
+    padding: 0;
+    box-sizing: border-box;
 }
 .con{
     max-width: 1200px;
@@ -132,24 +132,29 @@ body {
   }
   .grid {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 2rem;
+    padding: 2rem 1rem;
+    max-width: 100%;
   }
   
   .card {
-    width: 300px;
+    width: 280px;
+    max-width: 100%;
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
     padding: 1rem;
+    display: block;
   }
   
   .card img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
+    display: block;
   }
   
 

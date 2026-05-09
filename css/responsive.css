@@ -1,7 +1,12 @@
 /* ============================================
    RESPONSIVE CSS — Local Eats
-   Mobile-first breakpoints: 1024px, 768px, 480px
    ============================================ */
+
+/* Prevent ANY horizontal overflow at the root level */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 /* ---------- Hamburger Button ---------- */
 .hamburger {
@@ -31,17 +36,11 @@
 
 /* ---------- Tablet (≤1024px) ---------- */
 @media (max-width: 1024px) {
-  .grid {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
   .card {
-    width: 45%;
+    width: 45% !important;
   }
 
   .quote {
-    font-size: 1.8rem;
     padding: 2rem 1.5rem !important;
   }
 
@@ -53,11 +52,21 @@
 /* ---------- Mobile (≤768px) ---------- */
 @media (max-width: 768px) {
 
+  /* --- Prevent overflow --- */
+  * {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   /* --- Nav --- */
   nav {
     flex-wrap: wrap;
     padding: 0.8rem 5%;
-    position: relative;
+    align-items: center;
   }
 
   .hamburger {
@@ -65,7 +74,7 @@
   }
 
   .nav-links {
-    display: none;
+    display: none !important;
     flex-direction: column;
     width: 100%;
     gap: 0;
@@ -75,11 +84,12 @@
   }
 
   .nav-links.open {
-    display: flex;
+    display: flex !important;
   }
 
   .nav-links > li {
     border-top: 1px solid rgba(255,255,255,0.08);
+    width: 100%;
   }
 
   .nav-links a {
@@ -91,18 +101,19 @@
     box-sizing: border-box;
   }
 
-  /* --- Mobile Dropdowns (tap to toggle) --- */
+  /* --- Mobile Dropdowns --- */
   .dropdown-content {
     position: static !important;
     box-shadow: none !important;
     background-color: #2a2a2d !important;
     min-width: unset !important;
-    display: none;
+    width: 100% !important;
+    display: none !important;
     border-radius: 0 !important;
   }
 
   .dropdown-content.open {
-    display: block;
+    display: block !important;
   }
 
   .dropdown-content a {
@@ -113,46 +124,61 @@
 
   /* Disable CSS hover dropdown on mobile */
   .dropdown:hover .dropdown-content {
-    display: none;
+    display: none !important;
+  }
+
+  .dropdown-content.open {
+    display: block !important;
   }
 
   /* --- Hero sections --- */
   .hero, .heros, .first {
-    height: 200px;
-    font-size: 1.3rem;
-    background-attachment: scroll !important; /* Fix iOS Safari bug */
-    flex-direction: column;
+    height: 200px !important;
+    font-size: 1.2rem !important;
+    background-attachment: scroll !important;
   }
 
-  /* --- Content sections --- */
+  /* --- Quote/Welcome section --- */
   .quote {
     padding: 1.5rem 1rem !important;
-    font-size: 1.1rem !important;
     height: auto !important;
+    margin: 1rem !important;
+    max-width: calc(100% - 2rem) !important;
   }
 
   .quote h2 {
-    font-size: 1.8rem !important;
+    font-size: 1.6rem !important;
   }
 
+  /* --- Featured section --- */
   .featured-restaurants {
     padding: 1.5rem 0.5rem !important;
   }
 
   .featured-restaurants h2 {
-    font-size: 1.4rem !important;
+    font-size: 1.3rem !important;
+    padding: 0 0.5rem !important;
   }
 
-  /* --- Cards --- */
+  /* --- Cards grid: FORCE single column --- */
   .grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-    padding: 1rem;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 1rem 0.5rem !important;
+    gap: 1rem !important;
+    width: 100% !important;
   }
 
   .card {
-    width: 90%;
+    width: 92% !important;
+    max-width: 420px !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  .card img {
+    width: 100% !important;
+    height: auto !important;
   }
 
   /* --- Menu sections --- */
@@ -163,7 +189,7 @@
   /* --- Forms --- */
   .form-page {
     padding: 1rem;
-    width: 90%;
+    width: 95%;
     margin: 1rem auto;
   }
 
@@ -176,6 +202,7 @@
   footer > div {
     flex-direction: column !important;
     gap: 0.5rem;
+    align-items: center !important;
   }
 
   /* --- Audio player --- */
@@ -188,31 +215,30 @@
 /* ---------- Small phones (≤480px) ---------- */
 @media (max-width: 480px) {
   .logo {
-    font-size: 1.2rem;
+    font-size: 1.1rem !important;
   }
 
   .hero, .heros {
-    font-size: 1.1rem;
-    height: 160px;
+    height: 160px !important;
   }
 
   h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .quote h2 {
     font-size: 1.4rem !important;
   }
 
-  .card h3 {
-    font-size: 1rem;
+  h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .quote h2 {
+    font-size: 1.3rem !important;
   }
 
   .card {
-    width: 95%;
+    width: 95% !important;
+  }
+
+  .card h3 {
+    font-size: 0.95rem !important;
   }
 }
