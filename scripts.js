@@ -23,6 +23,51 @@ window.onload = function () {
             this.reset();
         });
     }
+
+    // ---------- Hamburger Menu ----------
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks  = document.querySelector(".nav-links");
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener("click", function () {
+            hamburger.classList.toggle("open");
+            navLinks.classList.toggle("open");
+        });
+    }
+
+    // ---------- Touch-friendly Dropdowns ----------
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+    dropdowns.forEach(function (link) {
+        link.addEventListener("click", function (e) {
+            // Only intercept on mobile (hamburger visible)
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const parent  = this.parentElement;
+                const content = parent.querySelector(".dropdown-content");
+                if (!content) return;
+
+                // Close all other open dropdowns
+                document.querySelectorAll(".dropdown-content.open").forEach(function (el) {
+                    if (el !== content) el.classList.remove("open");
+                });
+
+                content.classList.toggle("open");
+            }
+        });
+    });
+
+    // Close nav if user clicks outside on mobile
+    document.addEventListener("click", function (e) {
+        if (window.innerWidth <= 768 && navLinks && hamburger) {
+            if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                navLinks.classList.remove("open");
+                hamburger.classList.remove("open");
+                document.querySelectorAll(".dropdown-content.open").forEach(function (el) {
+                    el.classList.remove("open");
+                });
+            }
+        }
+    });
 };
 
 
