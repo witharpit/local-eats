@@ -229,11 +229,7 @@ body {
 }
 
 .dropdown-content {
-  /* Use visibility+opacity instead of display so transition works
-     and the tiny hover-gap doesn't cause flickering */
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
+  display: none;
   position: absolute;
   background-color: #1C1C1E;
   border-radius: 6px;
@@ -242,9 +238,27 @@ body {
   z-index: 100;
   top: 100%;
   left: 0;
-  /* Small padding-top creates an invisible bridge over the hover gap */
-  padding-top: 6px;
-  transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 0.8rem 1rem;
+  display: block;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+/* JS-controlled open state (replaces CSS :hover) */
+.dropdown.is-open .dropdown-content {
+  display: block;
+}
+
+.nav-links a i.fa-caret-down {
+  margin-left: 6px;
 }
 
 .dropdown-content li {
