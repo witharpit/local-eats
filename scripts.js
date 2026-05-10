@@ -56,6 +56,31 @@ window.onload = function () {
         });
     });
 
+    // ---------- Dropdown Hover Intent (Desktop) ----------
+    const desktopDropdowns = document.querySelectorAll(".dropdown");
+    let hoverTimeout;
+    desktopDropdowns.forEach(function (dropdown) {
+        dropdown.addEventListener("mouseenter", function () {
+            if (window.innerWidth > 768) {
+                clearTimeout(hoverTimeout);
+                // Close other open dropdowns just in case
+                document.querySelectorAll(".dropdown.is-open").forEach(d => {
+                    if (d !== dropdown) d.classList.remove("is-open");
+                });
+                dropdown.classList.add("is-open");
+            }
+        });
+        
+        dropdown.addEventListener("mouseleave", function () {
+            if (window.innerWidth > 768) {
+                // Add a small delay before closing to bridge the gap
+                hoverTimeout = setTimeout(() => {
+                    dropdown.classList.remove("is-open");
+                }, 150); // 150ms delay
+            }
+        });
+    });
+
     // Close nav if user clicks outside on mobile
     document.addEventListener("click", function (e) {
         if (window.innerWidth <= 768 && navLinks && hamburger) {
